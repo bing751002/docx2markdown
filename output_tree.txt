@@ -1,0 +1,960 @@
+Table 1
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: ---
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: 廠商及合作夥伴權限與選單維護
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: 專案代號：東森購物平台建置專案文件代號：ETM2.0-SRM-廠商及合作夥伴權限與選單維護.docx版　　本：0.1日　　期：2024年1月24日撰　　寫：Andy Jin
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: 專案代號：
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: 文件代號：
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: 版　　本：
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: 日　　期：
+  ├─ 東森得易購股份有限公司東森購物平台建置專案系統設計報告書: 撰　　寫：
+
+Table 2
+  ├─ 專案代號：: ---
+  ├─ 東森購物平台建置專案: ---
+  ├─ 專案代號：: 文件代號：
+  ├─ 東森購物平台建置專案: ETM2.0-SRM-廠商及合作夥伴權限與選單維護.docx
+  ├─ 專案代號：: 版　　本：
+  ├─ 東森購物平台建置專案: 0.1
+  ├─ 專案代號：: 日　　期：
+  ├─ 東森購物平台建置專案: 2024年1月24日
+  ├─ 專案代號：: 撰　　寫：
+  ├─ 東森購物平台建置專案: Andy Jin
+
+Table 3
+  ├─ 變更記錄: ---
+  ├─ 變更記錄: 日期
+  ├─ 變更記錄: 2024/1/24
+
+Table 4
+  ├─ 追蹤事項: ---
+
+Table 5
+  ├─ 功能名稱: ---
+  ├─ 廠商及合作夥伴權限與選單維護: ---
+  ├─ 功能名稱: 功能代號
+  ├─ 廠商及合作夥伴權限與選單維護: SRM-TX-0311
+  ├─ 功能名稱: 功能簡述
+  ├─ 廠商及合作夥伴權限與選單維護: 提供研發人員依照角色(包含一般廠商、特約商角色、外包倉角色等)設定B2B
+
+Table 6
+  ├─ 進入功能路徑: 使用權限控管
+  ├─ 供應商暨合作夥伴平台>廠商及合作夥伴帳號與權限維護>廠商及合作夥伴權限與選單維護: ■是 □否
+  ├─ 進入功能路徑: 使用審核流程
+  ├─ 供應商暨合作夥伴平台>廠商及合作夥伴帳號與權限維護>廠商及合作夥伴權限與選單維護: □是 ■否
+  ├─ 進入功能路徑: 其他說明
+
+Table 7
+  ├─ 權限角色選單TAB: ---
+
+Table 8
+  ├─ #: ---
+  ├─ 中文欄位: ---
+  ├─ 英文欄位: ---
+  ├─ 資料型態: ---
+  ├─ 欄位型態: ---
+  ├─ 說明: ---
+  ├─ 中文欄位: 權限角色選單/廠商選單/合作夥伴選單 TAB
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 依序顯示：權限角色選單、廠商選單、合作夥伴選單。預設在權限角色選單 TAB。
+  ├─ #: 以下為查詢條件區塊
+  ├─ 中文欄位: 角色
+  ├─ 英文欄位: roles
+  ├─ 資料型態: string
+  ├─ 欄位型態: 一般下拉選單
+  ├─ 說明: 提示文字：請選擇。請參考動作與事件(角色)。
+  ├─ 中文欄位: 查詢
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考動作與事件(查詢)。
+  ├─ #: 以上為查詢條件區塊
+  ├─ #: 以下為功能按鈕區塊
+  ├─ 中文欄位: 新增權限角色
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考動作與事件「新增權限角色Pop-up」。
+  ├─ #: 以上為功能按鈕區塊
+  ├─ #: 以下為查詢結果區塊系統預設排序欄位：[modifiedDate](desc)，若是使用者選擇以其他欄位排序，將影響原系統預設排序結果。以sortable表示使用者可以決定該欄位遞增、遞減排序，未提及欄位表示系統不提供自行決定該欄位排序方式。以enable表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。
+  ├─ 中文欄位: 群組名稱
+  ├─ 英文欄位: groupName
+  ├─ 資料型態: string
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ groupName }。sortable。
+  ├─ 中文欄位: 群組描述
+  ├─ 英文欄位: groupDescription
+  ├─ 資料型態: string
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ groupDescription }。sortable。
+  ├─ 中文欄位: 狀態
+  ├─ 英文欄位: status
+  ├─ 資料型態: string
+  ├─ 欄位型態: SwitchBtn
+  ├─ 說明: 顯示：{ status }。enable。請參考動作與事件(狀態)。
+  ├─ 中文欄位: 最後異動人員
+  ├─ 英文欄位: modifiedBy
+  ├─ 資料型態: string
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ modifiedBy }。
+  ├─ 中文欄位: 最後異動時間
+  ├─ 英文欄位: modifiedDate
+  ├─ 資料型態: date
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ modifiedDate }。格式：yyyy/MM/dd HH:mm:ss。sortable。
+  ├─ 中文欄位: 操作
+  ├─ 資料型態: icon
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 依序顯示：編輯icon、刪除icon。顯示編輯icon，請參考動作與事件(維護權限角色)。顯示刪除icon，點選後請參考動作與事件(刪除)。
+  ├─ #: 以上為查詢結果區塊
+
+Table 9
+  ├─ 元件: ---
+  ├─ 動作: ---
+  ├─ 檢核: ---
+  ├─ 說明: ---
+  ├─ 錯誤處理: ---
+  ├─ 元件: 查詢
+  ├─ 動作: click
+  ├─ 說明: 查詢條件：若為權限角色選單TAB，依[權限角色]查詢。若為廠商選單TAB，依[統一編號/身分證字號]+[廠商名稱]查詢。若為合作夥伴選單TAB，依[合作夥伴姓名]+[合作角色]查詢。
+  ├─ 元件: 新增權限角色
+  ├─ 動作: click
+  ├─ 說明: 點選後開啟「新增權限角色Pop-up」。
+  ├─ 元件: 維護權限角色
+  ├─ 動作: click
+  ├─ 說明: 點選後開啟「維護權限角色Pop-up」。
+  ├─ 元件: 角色
+  ├─ 動作: init
+  ├─ 說明: 呼叫「查詢角色清單」取得下拉選單資料。
+  ├─ 元件: 狀態
+  ├─ 動作: change
+  ├─ 說明: 呼叫「更新角色權限清單」更新資料。
+  ├─ 元件: 刪除
+  ├─ 動作: click
+  ├─ 說明: 呼叫「刪除角色權限資料」變更資料。
+
+Table 10
+  ├─ 新增權限角色 (Pop-up): ---
+
+Table 11
+  ├─ #: ---
+  ├─ 中文欄位: ---
+  ├─ 英文欄位: ---
+  ├─ 資料型態: ---
+  ├─ 欄位型態: ---
+  ├─ 說明: ---
+  ├─ 中文欄位: 標題
+  ├─ 資料型態: string
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示文案：新增權限角色。
+  ├─ #: 以下為權限角色選單資訊區塊以required表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位值。
+  ├─ 中文欄位: 群組名稱
+  ├─ 英文欄位: groupName
+  ├─ 資料型態: string
+  ├─ 欄位型態: 一般輸入框
+  ├─ 說明: 提示文字：請輸入。required。限輸入最多15個中英文字。
+  ├─ 中文欄位: 群組描述
+  ├─ 英文欄位: groupDescription
+  ├─ 資料型態: string
+  ├─ 欄位型態: 一般輸入框
+  ├─ 說明: 提示文字：請輸入。required。限輸入最多15個中英文字。
+  ├─ 中文欄位: B2B功能選單
+  ├─ 英文欄位: 文字
+  ├─ 資料型態: Checkbox
+  ├─ 欄位型態: 輸入
+  ├─ 說明: 必填。選項請參考 B2B功能清單。
+  ├─ #: 以上為權限角色選單資訊區塊
+  ├─ #: 以下為功能按鈕區塊
+  ├─ 中文欄位: 送出
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考動作與事件(送出)。
+  ├─ 中文欄位: 取消
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 點選取消，關閉視窗回到原頁。
+  ├─ #: 以上為功能按鈕區塊
+
+Table 12
+  ├─ 元件: ---
+  ├─ 動作: ---
+  ├─ 檢核: ---
+  ├─ 說明: ---
+  ├─ 錯誤處理: ---
+  ├─ 元件: 送出
+  ├─ 動作: click
+  ├─ 說明: 呼叫「新增角色權限資料」新增一筆資料對應。送出新增至供應商平台若送出成功，則顯示成功 toast
+
+Table 14
+  ├─ 維護權限角色 (Pop-up): ---
+
+Table 15
+  ├─ #: ---
+  ├─ 中文欄位: ---
+  ├─ 英文欄位: ---
+  ├─ 資料型態: ---
+  ├─ 欄位型態: ---
+  ├─ 說明: ---
+  ├─ 中文欄位: 標題
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示文案：維護角色選單。
+  ├─ #: 以下為權限角色選單資訊區塊以required表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位值。以enable表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。
+  ├─ 中文欄位: 群組名稱
+  ├─ 英文欄位: groupName
+  ├─ 資料型態: string
+  ├─ 欄位型態: 一般輸入框
+  ├─ 說明: required。enable。限輸入最多15個中英文字。
+  ├─ 中文欄位: 群組描述
+  ├─ 英文欄位: groupDescription
+  ├─ 資料型態: string
+  ├─ 欄位型態: 一般輸入框
+  ├─ 說明: required。enable。限輸入最多15個中英文字。
+  ├─ 中文欄位: B2B功能選單
+  ├─ 資料型態: string
+  ├─ 欄位型態: Checkbox
+  ├─ 說明: required。enable。請參考動作與事件(B2B功能選單)。
+  ├─ #: 以上為權限角色選單資訊區塊
+  ├─ #: 以下為功能按鈕區塊
+  ├─ 中文欄位: 送出
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考動作與事件(送出)。
+  ├─ 中文欄位: 取消
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 點選取消，請參考動作與事件(取消)。
+  ├─ #: 以上為功能按鈕區塊
+
+Table 16
+  ├─ 元件: ---
+  ├─ 動作: ---
+  ├─ 檢核: ---
+  ├─ 說明: ---
+  ├─ 錯誤處理: ---
+  ├─ 元件: 送出
+  ├─ 動作: click
+  ├─ 說明: 呼叫「更新角色權限資料」更新資料對應。將資料存入DB若送出成功，則顯示成功toast訊息：已送出申請<換行>已成功送出選單新增。
+  ├─ 元件: 取消
+  ├─ 動作: click
+  ├─ 說明: 關閉視窗回到原頁。
+  ├─ 元件: B2B功能選單
+  ├─ 動作: init
+  ├─ 說明: 呼叫「查詢B2B功能選單」更新資料對應。
+
+Table 17
+  ├─ 廠商選單TAB: ---
+
+Table 18
+  ├─ #: ---
+  ├─ 中文欄位: ---
+  ├─ 英文欄位: ---
+  ├─ 資料型態: ---
+  ├─ 欄位型態: ---
+  ├─ 說明: ---
+  ├─ #: 以下為查詢條件區塊
+  ├─ 中文欄位: 統一編號/身分證字號
+  ├─ 英文欄位: unifyNoOrIdNo
+  ├─ 資料型態: string
+  ├─ 說明: 提示文字：請輸入。選項：顯示所有{ unifyNoOrIdNo }。使用共用廠商編號查詢元件。
+  ├─ 中文欄位: 廠商編號/名稱
+  ├─ 英文欄位: supplierIdOrName
+  ├─ 資料型態: string
+  ├─ 說明: 提示文字：請輸入廠商編號或廠商名稱。使用共用廠商編號查詢元件。使用者選取後帶回並關閉選單。
+  ├─ 中文欄位: 查詢
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考功能說明(查詢)。
+  ├─ #: 以上為查詢條件區塊
+  ├─ #: 以下為查詢結果區塊系統預設排序欄位：[modifiedDate]
+
+Table 19
+  ├─ 統一編號/身分證字號: 廠商編號
+  ├─ unifyNoOrIdNo: supplierId
+  ├─ string: string
+  ├─ 提示文字：請輸入。選項：顯示所有{ unifyNoOrIdNo }。使用共用廠商編號查詢元件。: 提示文字：請輸入廠商編號或廠商名稱。使用共用廠商編號查詢元件。使用者選取後帶回並關閉選單。
+  ├─ 統一編號/身分證字號: 廠商名稱
+  ├─ unifyNoOrIdNo: supplierName
+  ├─ string: string
+  ├─ : 文字
+  ├─ 提示文字：請輸入。選項：顯示所有{ unifyNoOrIdNo }。使用共用廠商編號查詢元件。: 顯示：{supplierName}。
+  ├─ 統一編號/身分證字號: 狀態
+  ├─ unifyNoOrIdNo: stauts
+  ├─ string: string
+  ├─ : SwitchBtn
+  ├─ 提示文字：請輸入。選項：顯示所有{ unifyNoOrIdNo }。使用共用廠商編號查詢元件。: 顯示：{ stauts }。enable。點選後啟用該廠商權限選單，並更新資料庫進行資料變動。
+  ├─ 統一編號/身分證字號: 最後異動人員
+  ├─ unifyNoOrIdNo: modifiedBy
+  ├─ string: string
+  ├─ : 文字
+  ├─ 提示文字：請輸入。選項：顯示所有{ unifyNoOrIdNo }。使用共用廠商編號查詢元件。: 顯示：{ modifiedBy }。
+  ├─ 統一編號/身分證字號: 最後異動時間
+  ├─ unifyNoOrIdNo: modifiedDate
+  ├─ string: date
+  ├─ : 文字
+  ├─ 提示文字：請輸入。選項：顯示所有{ unifyNoOrIdNo }。使用共用廠商編號查詢元件。: 顯示：{ modifiedDate }。格式：YYYY/MM/DD HH:mm:ss。sortable。
+  ├─ 統一編號/身分證字號: 操作
+  ├─ string: icon
+  ├─ : 按鈕
+  ├─ 提示文字：請輸入。選項：顯示所有{ unifyNoOrIdNo }。使用共用廠商編號查詢元件。: 依序顯示：編輯icon、刪除icon。顯示編輯icon，請參考動作與事件(維護權限角色)。顯示刪除icon，請參考動作與事件(刪除)。
+  ├─ : 以上為查詢結果區塊
+
+Table 20
+  ├─ 元件: ---
+  ├─ 動作: ---
+  ├─ 檢核: ---
+  ├─ 說明: ---
+  ├─ 錯誤處理: ---
+  ├─ 元件: 維護權限角色
+  ├─ 動作: click
+  ├─ 說明: 點選後開啟「維護權限角色Pop-up」。
+  ├─ 元件: 刪除
+  ├─ 動作: click
+  ├─ 說明: 呼叫「刪除角色權限資料」變更資料。
+
+Table 21
+  ├─ 維護廠商選單 (Pop-up): ---
+
+Table 22
+  ├─ #: ---
+  ├─ 中文欄位: ---
+  ├─ 英文欄位: ---
+  ├─ 資料型態: ---
+  ├─ 欄位型態: ---
+  ├─ 說明: ---
+  ├─ 中文欄位: 標題
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示文案：維護廠商選單。
+  ├─ #: 以下為廠商選單資訊區塊以required表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位值。以enable表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。
+  ├─ 中文欄位: 廠商編號
+  ├─ 英文欄位: supplierId
+  ├─ 資料型態: string
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ SupplierId }。
+  ├─ 中文欄位: 廠商名稱
+  ├─ 英文欄位: supplierName
+  ├─ 資料型態: string
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ supplierName }。
+  ├─ 中文欄位: B2B功能選單
+  ├─ 資料型態: string
+  ├─ 欄位型態: Checkbox
+  ├─ 說明: required。enable。選項請參考 B2B功能清單。
+  ├─ #: 以上為廠商選單資訊區塊
+  ├─ #: 以下為功能按鈕區塊
+  ├─ 中文欄位: 送出
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考動作與事件(送出)。
+  ├─ 中文欄位: 取消
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 點選取消，請參考動作與事件(取消)。
+  ├─ #: 以上為功能按鈕區塊
+
+Table 23
+  ├─ 元件: ---
+  ├─ 動作: ---
+  ├─ 檢核: ---
+  ├─ 說明: ---
+  ├─ 錯誤處理: ---
+  ├─ 元件: 送出
+  ├─ 動作: click
+  ├─ 說明: 呼叫「更新角色權限資料」更新資料對應。若送出成功，則顯示成功toast訊息：已送出申請<換行>已成功送出選單新增。
+  ├─ 元件: 取消
+  ├─ 動作: click
+  ├─ 說明: 關閉視窗回到原頁。
+
+Table 24
+  ├─ 合作夥伴選單TAB: ---
+
+Table 25
+  ├─ #: ---
+  ├─ 中文欄位: ---
+  ├─ 英文欄位: ---
+  ├─ 資料型態: ---
+  ├─ 欄位型態: ---
+  ├─ 說明: ---
+  ├─ #: 以下為查詢條件區塊
+  ├─ 中文欄位: 合作夥伴姓名
+  ├─ 英文欄位: partnerName
+  ├─ 資料型態: string
+  ├─ 說明: 提示文字：請輸入。限輸入最多15個中英文字。使用共用合作夥伴查詢元件。
+  ├─ 中文欄位: 合作角色
+  ├─ 英文欄位: collaborateRole
+  ├─ 資料型態: string
+  ├─ 欄位型態: 一般下拉選單
+  ├─ 說明: 提示文字：請選擇。選項：購物專家、直播主、藝人、團購主、來賓/見證、廠代。選項來源：[SRM_DOMAIN](DOMAINID:COLLABORATEROLE )。
+  ├─ 中文欄位: 查詢
+  ├─ 英文欄位: 文字
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考功能說明(查詢)。
+  ├─ #: 以上為查詢條件區塊
+  ├─ #: 以下為查詢結果區塊系統預設排序欄位：[modifiedDate](desc)，若是使用者選擇以其他欄位排序，將影響原系統預設排序結果。以sortable表示使用者可以決定該欄位遞增、遞減排序，未提及欄位表示系統不提供自行決定該欄位排序方式。以enable表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。
+  ├─ 中文欄位: 合作角色
+  ├─ 英文欄位: collaborateRole
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ collaborateRole }。
+  ├─ 中文欄位: 合作夥伴姓名
+  ├─ 英文欄位: partnerName
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ partnerName}。
+  ├─ 中文欄位: 狀態
+  ├─ 英文欄位: status
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: SwitchBtn
+  ├─ 說明: 顯示：{ status }。enable。點選後啟用該合作夥伴權限選單，並更新資料庫進行資料變動。
+  ├─ 中文欄位: 最後異動人員
+  ├─ 英文欄位: modifiedBy
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ modifiedBy }。
+  ├─ 中文欄位: 最後異動時間
+  ├─ 英文欄位: modifiedDate
+  ├─ 資料型態: 日期時間
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ modifiedDate }。格式：yyyy/MM/dd HH:mm:ss。
+  ├─ 中文欄位: 操作
+  ├─ 資料型態: icon
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 依序顯示：編輯icon、刪除icon。顯示編輯icon，請參考動作與事件(維護權限角色)。顯示刪除icon，請參考動作與事件(刪除)。
+  ├─ #: 以上為查詢結果區塊
+
+Table 26
+  ├─ 元件: ---
+  ├─ 動作: ---
+  ├─ 檢核: ---
+  ├─ 說明: ---
+  ├─ 錯誤處理: ---
+  ├─ 元件: 維護權限角色
+  ├─ 動作: click
+  ├─ 說明: 點選後開啟「維護權限角色Pop-up」。
+  ├─ 元件: 刪除
+  ├─ 動作: click
+  ├─ 說明: 呼叫「刪除角色權限資料」變更資料。
+
+Table 27
+  ├─ 維護合作夥伴選單 (Pop-up): ---
+
+Table 28
+  ├─ #: ---
+  ├─ 中文欄位: ---
+  ├─ 英文欄位: ---
+  ├─ 資料型態: ---
+  ├─ 欄位型態: ---
+  ├─ 說明: ---
+  ├─ 中文欄位: 標題
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示文案：維護廠商選單。
+  ├─ #: 以enable表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。以required表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位。
+  ├─ #: 以下為合作夥伴選單資訊區塊
+  ├─ 中文欄位: 合作角色
+  ├─ 英文欄位: collaborateRole
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ collaborateRole }。
+  ├─ 中文欄位: 合作夥伴姓名
+  ├─ 英文欄位: partnerName
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: 文字
+  ├─ 說明: 顯示：{ partnerName}。
+  ├─ 中文欄位: B2B功能選單
+  ├─ 資料型態: 文字
+  ├─ 欄位型態: Checkbox
+  ├─ 說明: enable。required。選項請參考 B2B功能清單。
+  ├─ #: 以上為合作夥伴選單資訊區塊
+  ├─ #: 以下為功能按鈕區塊
+  ├─ 中文欄位: 送出
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 請參考功能說明(送出)。
+  ├─ 中文欄位: 取消
+  ├─ 欄位型態: 按鈕
+  ├─ 說明: 點選取消，請參考動作與事件(取消)。
+  ├─ #: 以上為功能按鈕區塊
+
+Table 29
+  ├─ 元件: ---
+  ├─ 動作: ---
+  ├─ 檢核: ---
+  ├─ 說明: ---
+  ├─ 錯誤處理: ---
+  ├─ 元件: 送出
+  ├─ 動作: click
+  ├─ 說明: 呼叫「更新角色權限資料」更新資料對應。若送出成功，則顯示成功toast訊息：已送出申請<換行>已成功送出選單更新。
+  ├─ 元件: 取消
+  ├─ 動作: click
+  ├─ 說明: 關閉視窗回到原頁。
+
+Table 30
+  ├─ 基本資料: ---
+  ├─ 基本資料: 功能說明
+  ├─ 基本資料: 系統/提供者
+  ├─ 基本資料: 執行方式
+  ├─ 基本資料: 設計規格
+  ├─ 基本資料: API path
+  ├─ 基本資料: 檢核邏輯
+  ├─ 基本資料: 業務邏輯
+
+Table 31
+  ├─ 基本資料: ---
+  ├─ 基本資料: 功能說明
+  ├─ 基本資料: 系統/提供者
+  ├─ 基本資料: 執行方式
+  ├─ 基本資料: 設計規格
+  ├─ 基本資料: API path
+  ├─ 基本資料: 檢核邏輯
+  ├─ 基本資料: 業務邏輯
+
+Table 32
+  ├─ 基本資料: ---
+  ├─ 基本資料: 功能說明
+  ├─ 基本資料: 系統/提供者
+  ├─ 基本資料: 執行方式
+  ├─ 基本資料: 設計規格
+  ├─ 基本資料: API path
+  ├─ 基本資料: 檢核邏輯
+  ├─ 基本資料: 業務邏輯
+
+Table 33
+  ├─ 基本資料: ---
+  ├─ 基本資料: 功能說明
+  ├─ 基本資料: 系統/提供者
+  ├─ 基本資料: 執行方式
+  ├─ 基本資料: 設計規格
+  ├─ 基本資料: API path
+  ├─ 基本資料: 檢核邏輯
+  ├─ 基本資料: 業務邏輯
+
+Table 34
+  ├─ 基本資料: ---
+  ├─ 基本資料: 功能說明
+  ├─ 基本資料: 系統/提供者
+  ├─ 基本資料: 執行方式
+  ├─ 基本資料: 設計規格
+  ├─ 基本資料: API path
+  ├─ 基本資料: 檢核邏輯
+  ├─ 基本資料: 業務邏輯
+
+Table 35
+  ├─ 錯誤代碼: ---
+  ├─ 錯誤訊息: ---
+  ├─ 用意: ---
+  ├─ HTTP Status Code: ---
+  ├─ 錯誤代碼: SRM-0001
+  ├─ 錯誤訊息: 缺少必要欄位資訊
+  ├─ 用意: API未接到必填欄位時
+  ├─ HTTP Status Code: 400
+
+Table 36
+  ├─ PermissionCode: ---
+  ├─ SystemFunctionCode: ---
+  ├─ SystemCode: ---
+  ├─ 說明: ---
+  ├─ PermissionCode: SRM-TX-0311
+  ├─ SystemFunctionCode: SRM-TX-0311
+  ├─ SystemCode: SRM
+  ├─ 說明: 進入功能
+
+Table 37
+  ├─ Field Name: ---
+  ├─ Data Type: ---
+  ├─ Mandatory: ---
+  ├─ Description: ---
+  ├─ Field Name: COLLABORATIONNO
+  ├─ Data Type: NUMBER(20)
+  ├─ Mandatory: TRUE
+  ├─ Description: 關聯共用主檔編號
+  ├─ Field Name: COLLABORATIONCODE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 關聯共用主檔類型代碼
+  ├─ Field Name: COLLABORATESTATUS
+  ├─ Data Type: NUMBER(4,0)
+  ├─ Mandatory: TRUE
+  ├─ Description: 合作狀態代碼(15)
+  ├─ Field Name: DESCRIPTION
+  ├─ Data Type: NVARCHAR2(512)
+  ├─ Mandatory: FALSE
+  ├─ Description: 其它說明
+  ├─ Field Name: PAYMENTBANKNAME
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 請款銀行名稱
+  ├─ Field Name: PAYMENTBANKACCOUNT
+  ├─ Data Type: NVARCHAR2(32)
+  ├─ Mandatory: FALSE
+  ├─ Description: 請款銀行帳號
+  ├─ Field Name: CREATEDDATE
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 建立時間
+  ├─ Field Name: CREATEDBY
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 建立人員
+  ├─ Field Name: Field Name
+  ├─ Data Type: Index state
+  ├─ Mandatory: Used columns
+  ├─ Description: Index expression
+  ├─ Field Name: SRM_COLLABORATION_PK
+  ├─ Data Type: Primary Constraint
+  ├─ Mandatory: SRM_COLLABORATION.COLLABORATIONNO
+
+Table 38
+  ├─ Field Name: ---
+  ├─ Data Type: ---
+  ├─ Mandatory: ---
+  ├─ Description: ---
+  ├─ Field Name: SUPPLIERID
+  ├─ Data Type: NUMBER(20)
+  ├─ Mandatory: TRUE
+  ├─ Description: 主檔流水號
+  ├─ Field Name: SUPIDENTIFYID
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 廠商識別碼
+  ├─ Field Name: COLLABORATIONNO
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 廠商編號
+  ├─ Field Name: UNIFYNO
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 統一編號
+  ├─ Field Name: IDNO
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 身分證字號
+  ├─ Field Name: SUPPLIERTYPE
+  ├─ Data Type: NVARCHAR2(64)
+  ├─ Mandatory: TRUE
+  ├─ Description: 供應商型態代碼(12)
+  ├─ Field Name: MAINSTATUS
+  ├─ Data Type: NVARCHAR2(64)
+  ├─ Mandatory: TRUE
+  ├─ Description: 供應商主檔狀態代碼(54)
+  ├─ Field Name: COLLABORATECHANNELTYPE
+  ├─ Data Type: NVARCHAR2(64)
+  ├─ Mandatory: FALSE
+  ├─ Description: 合作通路類別代碼(13)
+  ├─ Field Name: SUPPLIERNAME
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 廠商名稱
+  ├─ Field Name: FULLNAME
+  ├─ Data Type: NVARCHAR2(32)
+  ├─ Mandatory: TRUE
+  ├─ Description: 供應商全名
+  ├─ Field Name: COMPANYTYPE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 公司別代碼
+  ├─ Field Name: OVERSEASMALLTYPE
+  ├─ Data Type: NVARCHAR2(64)
+  ├─ Mandatory: FALSE
+  ├─ Description: 境外商城代碼(14)
+  ├─ Field Name: CAPITALIZATION
+  ├─ Data Type: NUMBER(10)
+  ├─ Mandatory: TRUE
+  ├─ Description: 資本額
+  ├─ Field Name: ESTABLISHDATE
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 設立日期
+  ├─ Field Name: CONTACTAREACODE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 聯絡區碼
+  ├─ Field Name: CONTACTNUMBER
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 聯絡電話
+  ├─ Field Name: CONTACTEXTENSION
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 聯絡分機
+  ├─ Field Name: FAXNUMBER
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 傳真號碼
+  ├─ Field Name: MANAGER
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 負責人
+  ├─ Field Name: RESEARCHABILITYTYPE
+  ├─ Data Type: NVARCHAR2(64)
+  ├─ Mandatory: FALSE
+  ├─ Description: 研發能力代碼(16)
+  ├─ Field Name: NUMBEROFEMPLOYEE
+  ├─ Data Type: NUMBER(7)
+  ├─ Mandatory: FALSE
+  ├─ Description: 員工人數
+  ├─ Field Name: DEDUCTWHITELIST
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: FALSE
+  ├─ Description: 減量白名單
+  ├─ Field Name: ACCESSROLETYPE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 權限角色代碼(21)
+  ├─ Field Name: OPERATIONCODE
+  ├─ Data Type: NVARCHAR2(64)
+  ├─ Mandatory: FALSE
+  ├─ Description: 作業代碼
+  ├─ Field Name: PICKUPATSUPPLIERSHIPPINGCOMPANY
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 到廠取貨貨運商(一般情況)
+  ├─ Field Name: DELIVERYDAYS
+  ├─ Data Type: NUMBER(3)
+  ├─ Mandatory: FALSE
+  ├─ Description: 配送天數
+  ├─ Field Name: ISSTOCKINGWHITELIST
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: FALSE
+  ├─ Description: 是否是入庫白名單
+  ├─ Field Name: RTNFACTORYPICKYN
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: FALSE
+  ├─ Description: 到廠逆物流
+  ├─ Field Name: INCOMEINVOICEFORMAT
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 進項發票格式
+  ├─ Field Name: CERTIFICATECODE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 憑證代碼
+  ├─ Field Name: ISADVANCEPAY
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: FALSE
+  ├─ Description: 是否提前撥款
+  ├─ Field Name: ISAGENTINVOICE
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: FALSE
+  ├─ Description: 是否代開發票
+  ├─ Field Name: PAYMENTMETHODTYPE
+  ├─ Data Type: NUMBER(4,0)
+  ├─ Mandatory: FALSE
+  ├─ Description: 付款方式代碼(27)
+  ├─ Field Name: TAXCODE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 課稅代碼
+  ├─ Field Name: INSHOPSETTLECLASSTYPE
+  ├─ Data Type: NUMBER(4,0)
+  ├─ Mandatory: FALSE
+  ├─ Description: 店中店廠請代碼(29)
+  ├─ Field Name: REQUESTPAYMENTREFUNDBASEDATETYPE
+  ├─ Data Type: NUMBER(4,0)
+  ├─ Mandatory: FALSE
+  ├─ Description: 廠請退款基準日代碼(30)
+  ├─ Field Name: ISMARGINREQUIRED
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: FALSE
+  ├─ Description: 是否需繳保證金
+  ├─ Field Name: ISIDOFMANAGER
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: TRUE
+  ├─ Description: 是否可提供負責人身分證
+  ├─ Field Name: ISBUSINESSREGISTRATION
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: TRUE
+  ├─ Description: 是否可提供營業登記
+  ├─ Field Name: IS401REPORT
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: TRUE
+  ├─ Description: 是否可提供401表
+  ├─ Field Name: MD
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 指派商開
+  ├─ Field Name: CREATEDDATE
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 建立時間
+  ├─ Field Name: CREATEDBY
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 建立人員
+  ├─ Field Name: Field Name
+  ├─ Data Type: Index state
+  ├─ Mandatory: Used columns
+  ├─ Description: Index expression
+  ├─ Field Name: SRM_SUPPLIER_PK
+  ├─ Data Type: Primary Constraint
+  ├─ Mandatory: SRM_SUPPLIER.SUPPLIERID
+
+Table 39
+  ├─ Field Name: ---
+  ├─ Data Type: ---
+  ├─ Mandatory: ---
+  ├─ Description: ---
+  ├─ Field Name: PARTNERID
+  ├─ Data Type: NUMBER(20)
+  ├─ Mandatory: TRUE
+  ├─ Description: 主檔流水號
+  ├─ Field Name: COLLABORATIONNO
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 廠商編號
+  ├─ Field Name: IDNO
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 身分證字號
+  ├─ Field Name: NAME
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 合作夥伴名稱
+  ├─ Field Name: ETMNO
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 東購編號
+  ├─ Field Name: MAINSTATUS
+  ├─ Data Type: NUMBER(4,0)
+  ├─ Mandatory: TRUE
+  ├─ Description: 合作夥伴主檔狀態代碼(54)
+  ├─ Field Name: CONTACTPHONE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 合作夥伴電話
+  ├─ Field Name: PARTNERBIRTHDAY
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 合作夥伴生日
+  ├─ Field Name: PARTNERNAME
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 合作夥伴姓名
+  ├─ Field Name: NUMBEROFEMPLOYEE
+  ├─ Data Type: NUMBER(7)
+  ├─ Mandatory: FALSE
+  ├─ Description: 直播主團隊人數
+  ├─ Field Name: CREATEDDATE
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 建立時間
+  ├─ Field Name: CREATEDBY
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 建立人員
+  ├─ Field Name: Field Name
+  ├─ Data Type: Index state
+  ├─ Mandatory: Used columns
+  ├─ Description: Index expression
+  ├─ Field Name: SRM_PARTNER_PK
+  ├─ Data Type: Primary Constraint
+  ├─ Mandatory: SRM_PARTNER.PARTNERID
+
+Table 40
+  ├─ Field Name: ---
+  ├─ Data Type: ---
+  ├─ Mandatory: ---
+  ├─ Description: ---
+  ├─ Field Name: ACCESSROLESETTINGID
+  ├─ Data Type: NUMBER(20)
+  ├─ Mandatory: TRUE
+  ├─ Description: 群組ID
+  ├─ Field Name: GROUPNAME
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: 群組名稱
+  ├─ Field Name: GROUPDESCRIPTION
+  ├─ Data Type: NVARCHAR2(256)
+  ├─ Mandatory: FALSE
+  ├─ Description: 群組描述
+  ├─ Field Name: STATUS
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: TRUE
+  ├─ Description: 狀態
+  ├─ Field Name: MODIFIEDBY
+  ├─ Data Type: NUMBER(6,0)
+  ├─ Mandatory: TRUE
+  ├─ Description: 最後異動人員
+  ├─ Field Name: MODIFIEDDATE
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 最後異動時間
+  ├─ Field Name: Field Name
+  ├─ Data Type: Index state
+  ├─ Mandatory: Used columns
+  ├─ Description: Index expression
+  ├─ Field Name: SRM_ACCESSROLESETTING_PK
+  ├─ Data Type: Primary Constraint
+  ├─ Mandatory: SRM_ACCESSROLESETTING.ACCESSROLESETTINGID
+
+Table 41
+  ├─ Field Name: ---
+  ├─ Data Type: ---
+  ├─ Mandatory: ---
+  ├─ Description: ---
+  ├─ Field Name: SYSTEMFUNCTIONCODE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: TRUE
+  ├─ Description: B2B功能代碼
+  ├─ Field Name: SYSTEMFUNCTIONNAME
+  ├─ Data Type: NVARCHAR2(64)
+  ├─ Mandatory: TRUE
+  ├─ Description: B2B功能名稱
+  ├─ Field Name: SYSTEMFUNCTIONPARENTCODE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: B2B母功能代碼
+  ├─ Field Name: ENTRYURL
+  ├─ Data Type: NVARCHAR2(128)
+  ├─ Mandatory: FALSE
+  ├─ Description: B2B功能連結
+  ├─ Field Name: SORT
+  ├─ Data Type: NUMBER(3)
+  ├─ Mandatory: TRUE
+  ├─ Description: B2B功能排序
+  ├─ Field Name: STATUS
+  ├─ Data Type: NUMBER(1)
+  ├─ Mandatory: TRUE
+  ├─ Description: 狀態
+  ├─ Field Name: MODIFIEDBY
+  ├─ Data Type: NUMBER(6,0)
+  ├─ Mandatory: TRUE
+  ├─ Description: 最後異動人員
+  ├─ Field Name: MODIFIEDDATE
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 最後異動時間
+  ├─ Field Name: Field Name
+  ├─ Data Type: Index state
+  ├─ Mandatory: Used columns
+  ├─ Description: Index expression
+  ├─ Field Name: SRM_SYSTEMFUNCTION_PK
+  ├─ Data Type: Primary Constraint
+  ├─ Mandatory: SRM_SYSTEMFUNCTION.SYSTEMFUNCTIONCODE
+
+Table 42
+  ├─ Field Name: ---
+  ├─ Data Type: ---
+  ├─ Mandatory: ---
+  ├─ Description: ---
+  ├─ Field Name: FUNCTIONMAPPINGID
+  ├─ Data Type: NUMBER(20)
+  ├─ Mandatory: TRUE
+  ├─ Description: B2B功能Mapping檔流水號
+  ├─ Field Name: B2BSYSTEMFUNCTIONCODE
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: B2B功能代碼
+  ├─ Field Name: GROUPID
+  ├─ Data Type: NUMBER(20)
+  ├─ Mandatory: FALSE
+  ├─ Description: 群組ID
+  ├─ Field Name: COLLABORATENO
+  ├─ Data Type: NVARCHAR2(16)
+  ├─ Mandatory: FALSE
+  ├─ Description: 供應商編號
+  ├─ Field Name: MODIFIEDBY
+  ├─ Data Type: NUMBER(6,0)
+  ├─ Mandatory: TRUE
+  ├─ Description: 最後異動人員
+  ├─ Field Name: MODIFIEDDATE
+  ├─ Data Type: DATE
+  ├─ Mandatory: TRUE
+  ├─ Description: 最後異動時間
+  ├─ Field Name: Field Name
+  ├─ Data Type: Index state
+  ├─ Mandatory: Used columns
+  ├─ Description: Index expression
+  ├─ Field Name: SRM_FUNCTIONMAPPING_PK
+  ├─ Data Type: Primary Constraint
+  ├─ Mandatory: SRM_FUNCTIONMAPPING.FUNCTIONMAPPINGID

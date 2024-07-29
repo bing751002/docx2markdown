@@ -1,0 +1,2800 @@
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr>
+<td><p>東森得易購股份有限公司</p>
+<p>東森購物平台建置專案</p>
+<p>系統設計報告書</p></td>
+</tr>
+<tr>
+<td>廠商及合作夥伴權限與選單維護</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td><table>
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: center;">專案代號：</td>
+<td>東森購物平台建置專案</td>
+</tr>
+<tr>
+<td style="text-align: center;">文件代號：</td>
+<td>ETM2.0-SRM-廠商及合作夥伴權限與選單維護.docx</td>
+</tr>
+<tr>
+<td style="text-align: center;">版　　本：</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">日　　期：</td>
+<td>2024年1月24日</td>
+</tr>
+<tr>
+<td style="text-align: center;">撰　　寫：</td>
+<td>Andy Jin</td>
+</tr>
+</tbody>
+</table></td>
+</tr>
+</tbody>
+</table>
+<h1 class="TOC-Heading"
+id="廠商及合作夥伴權限與選單維護">廠商及合作夥伴權限與選單維護</h1>
+<p><a href="#功能說明">1. 功能說明 <span>6</span></a></p>
+<p><a href="#業務或畫面流程及說明">2. 業務或畫面流程及說明
+<span>7</span></a></p>
+<p><a href="#廠商及合作夥伴帳號與權限維護">2.1.
+廠商及合作夥伴帳號與權限維護 <span>7</span></a></p>
+<p><a href="#權限角色選單-tab">2.1.1. 權限角色選單 TAB
+<span>7</span></a></p>
+<p><a href="#廠商選單-tab">2.1.2. 廠商選單 TAB <span>8</span></a></p>
+<p><a href="#合作夥伴選單-tab">2.1.3. 合作夥伴選單 TAB
+<span>9</span></a></p>
+<p><a href="#輸入輸出畫面及欄位說明">3. 輸入輸出畫面及欄位說明
+<span>10</span></a></p>
+<p><a href="#權限角色選單維護功能首頁">3.1. 權限角色選單維護(功能首頁)
+<span>10</span></a></p>
+<p><a href="#權限角色選單-tab-1">3.1.1. 權限角色選單 TAB
+<span>10</span></a></p>
+<p><a href="#前端欄位"><strong>3.1.1.1.</strong> 前端欄位
+<span>10</span></a></p>
+<p><a href="#動作與事件"><strong>3.1.1.2.</strong> 動作與事件
+<span>11</span></a></p>
+<p><a href="#新增權限角色pop-up">3.1.2. 新增權限角色(Pop-up)
+<span>13</span></a></p>
+<p><a href="#前端欄位-1"><strong>3.1.2.1.</strong> 前端欄位
+<span>13</span></a></p>
+<p><a href="#動作與事件-1"><strong>3.1.2.2.</strong> 動作與事件
+<span>14</span></a></p>
+<p><a href="#維護權限角色pop-up">3.1.3. 維護權限角色(Pop-up)
+<span>15</span></a></p>
+<p><a href="#前端欄位-2"><strong>3.1.3.1.</strong> 前端欄位
+<span>15</span></a></p>
+<p><a href="#動作與事件-2"><strong>3.1.3.2.</strong> 動作與事件
+<span>16</span></a></p>
+<p><a href="#廠商選單-tab-1">3.1.4. 廠商選單 TAB <span>18</span></a></p>
+<p><a href="#前端欄位-3"><strong>3.1.4.1.</strong> 前端欄位
+<span>18</span></a></p>
+<p><a href="#動作與事件-3"><strong>3.1.4.2.</strong> 動作與事件
+<span>19</span></a></p>
+<p><a href="#維護廠商選單pop-up">3.1.5. 維護廠商選單(Pop-up)
+<span>20</span></a></p>
+<p><a href="#前端欄位-4"><strong>3.1.5.1.</strong> 前端欄位
+<span>20</span></a></p>
+<p><a href="#動作與事件-4"><strong>3.1.5.2.</strong> 動作與事件
+<span>22</span></a></p>
+<p><a href="#合作夥伴選單-tab-1">3.1.6. 合作夥伴選單 TAB
+<span>23</span></a></p>
+<p><a href="#前端欄位-5"><strong>3.1.6.1.</strong> 前端欄位
+<span>23</span></a></p>
+<p><a href="#動作與事件-5"><strong>3.1.6.2.</strong> 動作與事件
+<span>24</span></a></p>
+<p><a href="#維護合作夥伴選單pop-up">3.1.7. 維護合作夥伴選單(Pop-up)
+<span>25</span></a></p>
+<p><a href="#前端欄位-6"><strong>3.1.7.1.</strong> 前端欄位
+<span>25</span></a></p>
+<p><a href="#前端欄位-7"><strong>3.1.7.2.</strong> 前端欄位
+<span>26</span></a></p>
+<p><a href="#api說明">4. API說明 <span>27</span></a></p>
+<p><a href="#查詢角色清單-1">4.1. 查詢角色清單 <span>27</span></a></p>
+<p><a href="#更新角色權限資料">4.2. 更新角色權限資料
+<span>27</span></a></p>
+<p><a href="#新增角色權限資料">4.3. 新增角色權限資料
+<span>28</span></a></p>
+<p><a href="#刪除角色權限資料">4.4. 刪除角色權限資料
+<span>29</span></a></p>
+<p><a href="#查詢b2b功能清單">4.5. 查詢B2B功能清單
+<span>29</span></a></p>
+<p><a href="#查詢b2b功能清單-1">查詢B2B功能清單 <span>29</span></a></p>
+<p><a href="#錯誤訊息代碼">5. 錯誤訊息代碼 <span>31</span></a></p>
+<p><a href="#角色權限代碼">6. 角色權限代碼 <span>32</span></a></p>
+<p><a href="#database-design">7. Database Design <span>33</span></a></p>
+<p><a href="#database-tables-diagram">7.1. Database Tables Diagram
+<span>33</span></a></p>
+<p><a href="#database-tables-schema">7.2. Database Tables Schema
+<span>33</span></a></p>
+<p><a href="#table-srm_collaboration關聯共用主檔">7.2.1. Table
+[SRM_COLLABORATION]關聯共用主檔 <span>33</span></a></p>
+<p><a href="#table-srm_supplier供應商主檔">7.2.2. Table
+[SRM_SUPPLIER]供應商主檔 <span>34</span></a></p>
+<p><a href="#table-srm_partner合作夥伴">7.2.3. Table
+[SRM_PARTNER]合作夥伴 <span>35</span></a></p>
+<p><a href="#table-srm_accessrolesettingaccessrolesetting">7.2.4. Table
+[SRM_ACCESSROLESETTING]ACCESSROLESETTING <span>36</span></a></p>
+<p><a href="#table-srm_systemfunctionb2b功能表">7.2.5. Table
+[SRM_SYSTEMFUNCTION]B2B功能表 <span>36</span></a></p>
+<p><a href="#table-srm_functionmappingb2b功能mapping檔">7.2.6. Table
+[SRM_FUNCTIONMAPPING]B2B功能Mapping檔 <span>37</span></a></p>
+<p><a href="#外部依賴">8. 外部依賴 <span>38</span></a></p>
+<p><a href="#批次執行">9. 批次執行 <span>39</span></a></p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 17%" />
+<col style="width: 7%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="4"
+style="text-align: center;"><strong>變更記錄</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>日期</strong></td>
+<td style="text-align: center;"><strong>作者</strong></td>
+<td style="text-align: center;"><strong>版本</strong></td>
+<td style="text-align: center;"><strong>摘要</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">2024/1/24</td>
+<td style="text-align: left;">Andy Jin</td>
+<td style="text-align: left;">0.1</td>
+<td style="text-align: left;">初版</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>追蹤事項</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="功能說明">功能說明</h1>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>功能名稱</strong></th>
+<th style="text-align: left;">廠商及合作夥伴權限與選單維護</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>功能代號</strong></td>
+<td style="text-align: left;">SRM-TX-0311</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>功能簡述</strong></td>
+<td
+style="text-align: left;">提供研發人員依照角色(包含一般廠商、特約商角色、外包倉角色等)設定B2B
+選單權限，亦可依照特定廠商及合作夥伴設定B2B 選單權限。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>進入功能路徑</strong></td>
+<td
+style="text-align: left;">供應商暨合作夥伴平台&gt;廠商及合作夥伴帳號與權限維護&gt;廠商及合作夥伴權限與選單維護</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>使用權限控管</strong></td>
+<td style="text-align: left;">■是 □否</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>使用審核流程</strong></td>
+<td style="text-align: left;">□是 ■否</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>其他說明</strong></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="業務或畫面流程及說明">業務或畫面流程及說明</h1>
+<h2 id="廠商及合作夥伴帳號與權限維護">廠商及合作夥伴帳號與權限維護</h2>
+<h3 id="權限角色選單-tab">權限角色選單 TAB</h3>
+<p><img src="temp_media/media/image10.png"
+style="width:4.57655in;height:8.48333in"
+alt="一張含有 文字, 平行, 收據, 數字 的圖片 自動產生的描述" /></p>
+<h3 id="廠商選單-tab">廠商選單 TAB</h3>
+<p><img src="temp_media/media/image11.png"
+style="width:4.93551in;height:7.16484in"
+alt="一張含有 文字, 螢幕擷取畫面, 平行, 數字 的圖片 自動產生的描述" /></p>
+<h3 id="合作夥伴選單-tab">合作夥伴選單 TAB</h3>
+<p><img src="temp_media/media/image12.png"
+style="width:4.32766in;height:8.02198in"
+alt="一張含有 文字, 平行, 收據, 數字 的圖片 自動產生的描述" /></p>
+<h1 id="輸入輸出畫面及欄位說明">輸入輸出畫面及欄位說明</h1>
+<h2 id="權限角色選單維護功能首頁">權限角色選單維護(功能首頁)</h2>
+<h3 id="權限角色選單-tab-1">權限角色選單 TAB</h3>
+<h4 id="前端欄位">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">權限角色選單TAB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="temp_media/media/image13.png"
+style="width:6.4537in;height:4.54659in" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>欄位說明</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 18%" />
+<col style="width: 15%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th style="text-align: center;"><strong>中文欄位</strong></th>
+<th style="text-align: center;"><strong>英文欄位</strong></th>
+<th style="text-align: center;"><strong>資料型態</strong></th>
+<th style="text-align: center;"><strong>欄位型態</strong></th>
+<th style="text-align: center;"><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>權限角色選單/廠商選單/合作夥伴選單 TAB</td>
+<td></td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>依序顯示：權限角色選單、廠商選單、合作夥伴選單。</p></li>
+<li><p>預設在權限角色選單 TAB。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以下為<strong>查詢條件</strong>區塊</td>
+</tr>
+<tr>
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>角色</td>
+<td>roles</td>
+<td>string</td>
+<td>一般下拉選單</td>
+<td><ol type="1">
+<li><p>提示文字：請選擇。</p></li>
+<li><p>請參考動作與事件<a href="#角色init">(角色)</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>查詢</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考動作與事件<a href="#查詢角色清單">(查詢)</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>查詢條件</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="6">以下為<strong>功能按鈕</strong>區塊</td>
+</tr>
+<tr>
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>新增權限角色</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考動作與事件<a
+href="#新增權限角色click">「新增權限角色Pop-up」</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>功能按鈕</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="6"><p>以下為<strong>查詢結果</strong>區塊</p>
+<ol type="1">
+<li><p>系統預設排序欄位：[modifiedDate](desc)，若是使用者選擇以其他欄位排序，將影響原系統預設排序結果。</p></li>
+<li><p>以<strong>sortable</strong>表示使用者可以決定該欄位遞增、遞減排序，未提及欄位表示系統不提供自行決定該欄位排序方式。</p></li>
+<li><p>以<strong>enable</strong>表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>群組名稱</td>
+<td>groupName</td>
+<td>string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ groupName }。</p></li>
+<li><p><strong>sortable</strong>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>群組描述</td>
+<td>groupDescription</td>
+<td>string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ groupDescription }。</p></li>
+<li><p><strong>sortable</strong>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="7" type="1">
+<li></li>
+</ol></td>
+<td>狀態</td>
+<td>status</td>
+<td>string</td>
+<td>SwitchBtn</td>
+<td><ol type="1">
+<li><p>顯示：{ status }。</p></li>
+<li><p><strong>enable</strong>。</p></li>
+<li><p>請參考動作與事件(<a href="#狀態切換">狀態</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="8" type="1">
+<li></li>
+</ol></td>
+<td>最後異動人員</td>
+<td>modifiedBy</td>
+<td>string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ modifiedBy }。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="9" type="1">
+<li></li>
+</ol></td>
+<td>最後異動時間</td>
+<td>modifiedDate</td>
+<td>date</td>
+<td>文字</td>
+<td><ol start="2" type="1">
+<li><p>顯示：{ modifiedDate }。</p></li>
+<li><p>格式：yyyy/MM/dd HH:mm:ss。</p></li>
+<li><p><strong>sortable</strong>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="10" type="1">
+<li></li>
+</ol></td>
+<td>操作</td>
+<td></td>
+<td>icon</td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>依序顯示：編輯icon、刪除icon。</p></li>
+<li><p>顯示編輯icon，請參考動作與事件(<a
+href="#維護權限角色click">維護權限角色</a>)。</p></li>
+<li><p>顯示刪除icon，點選後請參考動作與事件(<a
+href="#刪除click">刪除</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>查詢結果</strong>區塊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="動作與事件">動作與事件</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 48%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr>
+<th>元件</th>
+<th>動作</th>
+<th>檢核</th>
+<th>說明</th>
+<th>錯誤處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="查詢角色清單" class="anchor"></span>查詢</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>查詢條件：</p>
+<ol type="A">
+<li><p>若為權限角色選單TAB，依[權限角色]查詢。</p></li>
+<li><p>若為廠商選單TAB，依[統一編號/身分證字號]+[廠商名稱]查詢。</p></li>
+<li><p>若為合作夥伴選單TAB，依[合作夥伴姓名]+[合作角色]查詢。</p></li>
+</ol></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="新增權限角色click" class="anchor"></span>新增權限角色</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>點選後開啟<a
+href="#新增權限角色">「新增權限角色Pop-up」</a>。</p></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="維護權限角色click" class="anchor"></span>維護權限角色</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>點選後開啟<a
+href="#維護權限角色pop-up">「維護權限角色Pop-up」</a>。</p></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="角色init" class="anchor"></span>角色</td>
+<td>init</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#查詢角色清單-1">查詢角色清單</a>」取得下拉選單資料。</p></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="狀態切換" class="anchor"></span>狀態</td>
+<td>change</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#更新角色權限資料">更新角色權限清單</a>」更新資料。</p></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="刪除click" class="anchor"></span>刪除</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#刪除角色權限資料">刪除角色權限資料</a>」變更資料。</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />
+</strong></p>
+<h3 id="新增權限角色pop-up">新增權限角色(Pop-up)</h3>
+<h4 id="前端欄位-1">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">新增權限角色 (Pop-up)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="temp_media/media/image14.png"
+style="width:5.59065in;height:8.01667in"
+alt="一張含有 文字, 螢幕擷取畫面, 功能表, 數字 的圖片 自動產生的描述" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>欄位說明</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 18%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th style="text-align: center;"><strong>中文欄位</strong></th>
+<th><strong>英文欄位</strong></th>
+<th style="text-align: center;"><p><strong>資料</strong></p>
+<p><strong>型態</strong></p></th>
+<th style="text-align: center;"><strong>欄位型態</strong></th>
+<th style="text-align: center;"><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>標題</td>
+<td></td>
+<td>string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示文案：新增權限角色。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6"><p>以下為<strong>權限角色選單資訊</strong>區塊</p>
+<ol type="1">
+<li><p>以<strong>required</strong>表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位值。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>群組名稱</td>
+<td>groupName</td>
+<td>string</td>
+<td>一般輸入框</td>
+<td><ol type="1">
+<li><p>提示文字：請輸入。</p></li>
+<li><p><strong>required</strong>。</p></li>
+<li><p>限輸入最多15個中英文字。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>群組描述</td>
+<td>groupDescription</td>
+<td>string</td>
+<td>一般輸入框</td>
+<td><ol type="1">
+<li><p>提示文字：請輸入。</p></li>
+<li><p><strong>required</strong>。</p></li>
+<li><p>限輸入最多15個中英文字。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>B2B功能選單</td>
+<td>文字</td>
+<td>Checkbox</td>
+<td>輸入</td>
+<td><ol type="1">
+<li><p>必填。</p></li>
+<li><p>選項請參考 B2B功能清單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>權限角色選單資訊</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="6">以下為<strong>功能按鈕</strong>區塊</td>
+</tr>
+<tr>
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>送出</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考動作與事件<a href="#送出按鈕click">(送出)</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>取消</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>點選取消，關閉視窗回到原頁。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為功能<strong>按鈕</strong>區塊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="動作與事件-1">動作與事件</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>元件</th>
+<th>動作</th>
+<th>檢核</th>
+<th>說明</th>
+<th>錯誤處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="送出按鈕click" class="anchor"></span>送出</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#新增角色權限資料">新增角色權限資料</a>」新增一筆資料對應。</p></li>
+<li><p>送出新增至供應商平台</p>
+<ol type="A">
+<li><p>若送出成功，則顯示成功 toast
+訊息：已送出申請&lt;換行&gt;已成功送出選單新增。</p></li>
+</ol></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td>取消</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>關閉視窗回到原頁。</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="維護權限角色pop-up">維護權限角色(Pop-up)</h3>
+<h4 id="前端欄位-2">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">維護權限角色 (Pop-up)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="temp_media/media/image15.png"
+style="width:5.44331in;height:7.82792in" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>欄位說明</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 14%" />
+<col style="width: 15%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th style="text-align: center;"><strong>中文欄位</strong></th>
+<th style="text-align: center;"><strong>英文欄位</strong></th>
+<th style="text-align: center;"><p><strong>資料</strong></p>
+<p><strong>型態</strong></p></th>
+<th style="text-align: center;"><strong>欄位型態</strong></th>
+<th style="text-align: center;"><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>標題</td>
+<td></td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示文案：維護角色選單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6"><p>以下為<strong>權限角色選單資訊</strong>區塊</p>
+<ol type="1">
+<li><p>以<strong>required</strong>表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位值。</p></li>
+<li><p>以<strong>enable</strong>表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>群組名稱</td>
+<td>groupName</td>
+<td>string</td>
+<td>一般輸入框</td>
+<td><ol type="1">
+<li><p><strong>required</strong>。</p></li>
+<li><p><strong>enable</strong>。</p></li>
+</ol>
+<ol start="3" type="1">
+<li><p>限輸入最多15個中英文字。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>群組描述</td>
+<td>groupDescription</td>
+<td>string</td>
+<td>一般輸入框</td>
+<td><ol type="1">
+<li><p><strong>required</strong>。</p></li>
+<li><p><strong>enable</strong>。</p></li>
+<li><p>限輸入最多15個中英文字。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>B2B功能選單</td>
+<td></td>
+<td>string</td>
+<td>Checkbox</td>
+<td><ol type="1">
+<li><p><strong>required</strong>。</p></li>
+<li><p><strong>enable</strong>。</p></li>
+<li><p>請參考動作與事件(<a
+href="#B2B功能選單click">B2B功能選單</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>權限角色選單資訊</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="6">以下為<strong>功能按鈕</strong>區塊</td>
+</tr>
+<tr>
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>送出</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考動作與事件<a href="#取消click2">(送出)</a> 。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>取消</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>點選取消，請參考動作與事件(<a
+href="#取消click2">取消</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>功能按鈕</strong>區塊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="動作與事件-2">動作與事件</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>元件</th>
+<th>動作</th>
+<th>檢核</th>
+<th>說明</th>
+<th>錯誤處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>送出</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#更新角色權限資料">更新角色權限資料</a>」更新資料對應。</p></li>
+<li><p>將資料存入DB</p>
+<ol type="A">
+<li><p>若送出成功，則顯示成功toast訊息：已送出申請&lt;換行&gt;已成功送出選單新增。</p></li>
+</ol></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="取消click2" class="anchor"></span>取消</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>關閉視窗回到原頁。</p></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="B2B功能選單click" class="anchor"></span>B2B功能選單</td>
+<td>init</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#查詢b2b功能清單">查詢B2B功能選單</a>」更新資料對應。</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="廠商選單-tab-1">廠商選單 TAB</h3>
+<h4 id="前端欄位-3">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">廠商選單TAB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="temp_media/media/image16.png"
+style="width:6.47071in;height:4.53932in" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>欄位說明</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 14%" />
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th style="text-align: center;"><strong>中文欄位</strong></th>
+<th style="text-align: center;"><strong>英文欄位</strong></th>
+<th style="text-align: center;"><p><strong>資料</strong></p>
+<p><strong>型態</strong></p></th>
+<th style="text-align: center;"><strong>欄位型態</strong></th>
+<th style="text-align: center;"><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="6">以下為<strong>查詢條件</strong>區塊</td>
+</tr>
+<tr>
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>統一編號/身分證字號</td>
+<td>unifyNoOrIdNo</td>
+<td>string</td>
+<td></td>
+<td><ol type="1">
+<li><p>提示文字：請輸入。</p></li>
+<li><p>選項：顯示所有{ unifyNoOrIdNo }。</p></li>
+<li><p>使用共用廠商編號查詢元件。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>廠商編號/名稱</td>
+<td>supplierIdOrName</td>
+<td>string</td>
+<td></td>
+<td><ol type="1">
+<li><p>提示文字：請輸入廠商編號或廠商名稱。</p></li>
+<li><p>使用共用廠商編號查詢元件。</p></li>
+<li><p>使用者選取後帶回並關閉選單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>查詢</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考功能說明<a href="#查詢">(查詢)</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>查詢條件</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="6"><p>以下為<strong>查詢結果</strong>區塊</p>
+<ol type="1">
+<li><p>系統預設排序欄位：[modifiedDate]
+(desc)，若是使用者選擇以其他欄位排序，將影響原系統預設排序結果。</p></li>
+<li><p>以<strong>sortable</strong>表示使用者可以決定該欄位遞增、遞減排序，未提及欄位表示系統不提供自行決定該欄位排序方式。</p></li>
+<li><p>以<strong>enable</strong>表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>統一編號/身分證字號</td>
+<td>unifyNoOrIdNo</td>
+<td>string</td>
+<td></td>
+<td><ol type="1">
+<li><p>提示文字：請輸入。</p></li>
+<li><p>選項：顯示所有{ unifyNoOrIdNo }。</p></li>
+<li><p>使用共用廠商編號查詢元件。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>廠商編號</td>
+<td>supplierId</td>
+<td>string</td>
+<td></td>
+<td><ol type="1">
+<li><p>提示文字：請輸入廠商編號或廠商名稱。</p></li>
+<li><p>使用共用廠商編號查詢元件。</p></li>
+<li><p>使用者選取後帶回並關閉選單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>廠商名稱</td>
+<td>supplierName</td>
+<td>string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p><mark>顯示：{</mark> supplierName <mark>}。</mark></p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="7" type="1">
+<li></li>
+</ol></td>
+<td>狀態</td>
+<td>stauts</td>
+<td>string</td>
+<td>SwitchBtn</td>
+<td><ol type="1">
+<li><p>顯示：{ stauts }。</p></li>
+<li><p><strong>enable</strong>。</p></li>
+<li><p>點選後啟用該廠商權限選單，並更新資料庫進行資料變動。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="8" type="1">
+<li></li>
+</ol></td>
+<td>最後異動人員</td>
+<td>modifiedBy</td>
+<td>string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ modifiedBy }。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="9" type="1">
+<li></li>
+</ol></td>
+<td>最後異動時間</td>
+<td>modifiedDate</td>
+<td>date</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ modifiedDate }。</p></li>
+<li><p>格式：YYYY/MM/DD HH:mm:ss。</p></li>
+<li><p><strong>sortable</strong>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="10" type="1">
+<li></li>
+</ol></td>
+<td>操作</td>
+<td></td>
+<td>icon</td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>依序顯示：編輯icon、刪除icon。</p></li>
+<li><p>顯示編輯icon，請參考動作與事件(<a
+href="#維護權限角色click2">維護權限角色</a>)。</p></li>
+<li><p>顯示刪除icon，請參考動作與事件(<a
+href="#刪除click2">刪除</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>查詢結果</strong>區塊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="動作與事件-3">動作與事件</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>元件</th>
+<th>動作</th>
+<th>檢核</th>
+<th>說明</th>
+<th>錯誤處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="維護權限角色click2"
+class="anchor"></span>維護權限角色</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>點選後開啟<a
+href="#維護權限角色pop-up">「維護權限角色Pop-up」</a>。</p></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="刪除click2" class="anchor"></span>刪除</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#刪除角色權限資料">刪除角色權限資料</a>」變更資料。</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="維護廠商選單pop-up">維護廠商選單(Pop-up)</h3>
+<h4 id="前端欄位-4">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">維護廠商選單 (Pop-up)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="temp_media/media/image17.png"
+style="width:5.89067in;height:8.40385in" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>欄位說明</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 15%" />
+<col style="width: 14%" />
+<col style="width: 1%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th style="text-align: center;"><strong>中文欄位</strong></th>
+<th colspan="2"
+style="text-align: center;"><strong>英文欄位</strong></th>
+<th style="text-align: center;"><p><strong>資料</strong></p>
+<p><strong>型態</strong></p></th>
+<th style="text-align: center;"><strong>欄位型態</strong></th>
+<th style="text-align: center;"><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>標題</td>
+<td></td>
+<td colspan="2">文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示文案：維護廠商選單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="7"><p>以下為<strong>廠商選單資訊</strong>區塊</p>
+<ol type="1">
+<li><p><mark>以<strong>required</strong>表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位值。</mark></p></li>
+<li><p>以<strong>enable</strong>表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>廠商編號</td>
+<td>supplierId</td>
+<td colspan="2">string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ SupplierId }。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>廠商名稱</td>
+<td>supplierName</td>
+<td colspan="2">string</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ supplierName }。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>B2B功能選單</td>
+<td></td>
+<td colspan="2">string</td>
+<td>Checkbox</td>
+<td><ol type="1">
+<li><p><strong>required</strong>。</p></li>
+<li><p><strong>enable</strong>。</p></li>
+<li><p>選項請參考 B2B功能清單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="7">以上為<strong>廠商選單資訊</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="7">以下為<strong>功能按鈕</strong>區塊</td>
+</tr>
+<tr>
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>送出</td>
+<td></td>
+<td colspan="2"></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考動作與事件<a href="#送出按鈕click3">(送出)</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>取消</td>
+<td></td>
+<td colspan="2"></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>點選取消，請參考動作與事件(<a
+href="#取消click3">取消</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="7">以上為<strong>功能按鈕</strong>區塊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="動作與事件-4">動作與事件</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>元件</th>
+<th>動作</th>
+<th>檢核</th>
+<th>說明</th>
+<th>錯誤處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="送出按鈕click3" class="anchor"></span>送出</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#更新角色權限資料">更新角色權限資料</a>」更新資料對應。</p>
+<ol type="A">
+<li><p>若送出成功，則顯示成功toast訊息：已送出申請&lt;換行&gt;已成功送出選單新增。</p></li>
+</ol></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="取消click3" class="anchor"></span>取消</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>關閉視窗回到原頁。</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="合作夥伴選單-tab-1">合作夥伴選單 TAB</h3>
+<h4 id="前端欄位-5">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">合作夥伴選單TAB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="temp_media/media/image18.png"
+style="width:6.54901in;height:4.59963in" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>欄位說明</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 14%" />
+<col style="width: 15%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th style="text-align: center;"><strong>中文欄位</strong></th>
+<th style="text-align: center;"><strong>英文欄位</strong></th>
+<th style="text-align: center;"><p><strong>資料</strong></p>
+<p><strong>型態</strong></p></th>
+<th style="text-align: center;"><strong>欄位型態</strong></th>
+<th style="text-align: center;"><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="6">以下為<strong>查詢條件</strong>區塊</td>
+</tr>
+<tr>
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>合作夥伴姓名</td>
+<td>partnerName</td>
+<td>string</td>
+<td></td>
+<td><ol type="1">
+<li><p>提示文字：請輸入。</p></li>
+<li><p>限輸入最多15個中英文字。</p></li>
+<li><p>使用共用合作夥伴查詢元件。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>合作角色</td>
+<td>collaborateRole</td>
+<td>string</td>
+<td>一般下拉選單</td>
+<td><ol type="1">
+<li><p>提示文字：請選擇。</p></li>
+<li><p>選項：購物專家、直播主、藝人、團購主、來賓/見證、廠代。</p></li>
+<li><p>選項來源：[SRM_DOMAIN](DOMAINID:COLLABORATEROLE )。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>查詢</td>
+<td>文字</td>
+<td>文字</td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考功能說明<a href="#查詢">(查詢)</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>查詢條件</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="6"><p>以下為<strong>查詢結果</strong>區塊</p>
+<ol type="1">
+<li><p>系統預設排序欄位：[modifiedDate](desc)，若是使用者選擇以其他欄位排序，將影響原系統預設排序結果。</p></li>
+<li><p>以<strong>sortable</strong>表示使用者可以決定該欄位遞增、遞減排序，未提及欄位表示系統不提供自行決定該欄位排序方式。</p></li>
+<li><p>以<strong>enable</strong>表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>合作角色</td>
+<td>collaborateRole</td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ collaborateRole }。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>合作夥伴姓名</td>
+<td>partnerName</td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ partnerName <u>}</u>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>狀態</td>
+<td>status</td>
+<td>文字</td>
+<td>SwitchBtn</td>
+<td><ol type="1">
+<li><p>顯示：{ status }。</p></li>
+<li><p><strong>enable</strong>。</p></li>
+<li><p>點選後啟用該合作夥伴權限選單，並更新資料庫進行資料變動。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="7" type="1">
+<li></li>
+</ol></td>
+<td>最後異動人員</td>
+<td>modifiedBy</td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ modifiedBy }。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="8" type="1">
+<li></li>
+</ol></td>
+<td>最後異動時間</td>
+<td>modifiedDate</td>
+<td>日期時間</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ modifiedDate }。</p></li>
+<li><p>格式：yyyy/MM/dd HH:mm:ss。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="9" type="1">
+<li></li>
+</ol></td>
+<td>操作</td>
+<td></td>
+<td>icon</td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>依序顯示：編輯icon、刪除icon。</p></li>
+<li><p>顯示編輯icon，請參考動作與事件(<a
+href="#維護權限角色click3">維護權限角色</a>)。</p></li>
+<li><p>顯示刪除icon，請參考動作與事件(<a
+href="#刪除click3">刪除</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>查詢結果</strong>區塊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="動作與事件-5">動作與事件</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>元件</th>
+<th>動作</th>
+<th>檢核</th>
+<th>說明</th>
+<th>錯誤處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="維護權限角色click3"
+class="anchor"></span>維護權限角色</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>點選後開啟<a
+href="#維護權限角色pop-up">「維護權限角色Pop-up」</a>。</p></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="刪除click3" class="anchor"></span>刪除</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#刪除角色權限資料">刪除角色權限資料</a>」變更資料。</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="維護合作夥伴選單pop-up">維護合作夥伴選單(Pop-up)</h3>
+<h4 id="前端欄位-6">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">維護合作夥伴選單 (Pop-up)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="temp_media/media/image19.png"
+style="width:5.06739in;height:7.22932in" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>欄位說明</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 18%" />
+<col style="width: 15%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>#</strong></th>
+<th><strong>中文欄位</strong></th>
+<th style="text-align: center;"><strong>英文欄位</strong></th>
+<th style="text-align: center;"><p><strong>資料</strong></p>
+<p><strong>型態</strong></p></th>
+<th style="text-align: center;"><strong>欄位型態</strong></th>
+<th style="text-align: center;"><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><ol type="1">
+<li></li>
+</ol></td>
+<td>標題</td>
+<td></td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示文案：維護廠商選單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6"><ol type="1">
+<li><p>以<strong>enable</strong>表示該欄位可編輯，未提及欄位表示不可編輯欄位內容。</p></li>
+<li><p>以<strong>required</strong>表示該欄位必須有值，未提及欄位表示由使用者自行決定是否選取/輸入欄位。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以下為<strong>合作夥伴選單資訊</strong>區塊</td>
+</tr>
+<tr>
+<td><ol start="2" type="1">
+<li></li>
+</ol></td>
+<td>合作角色</td>
+<td>collaborateRole</td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ collaborateRole }。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="3" type="1">
+<li></li>
+</ol></td>
+<td>合作夥伴姓名</td>
+<td>partnerName</td>
+<td>文字</td>
+<td>文字</td>
+<td><ol type="1">
+<li><p>顯示：{ partnerName <u>}</u>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="4" type="1">
+<li></li>
+</ol></td>
+<td>B2B功能選單</td>
+<td></td>
+<td>文字</td>
+<td>Checkbox</td>
+<td><ol type="1">
+<li><p><strong>enable</strong>。</p></li>
+<li><p><strong>required</strong>。</p></li>
+<li><p>選項請參考 B2B功能清單。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>合作夥伴選單資訊</strong>區塊</td>
+</tr>
+<tr>
+<td colspan="6">以下為<strong>功能按鈕</strong>區塊</td>
+</tr>
+<tr>
+<td><ol start="5" type="1">
+<li></li>
+</ol></td>
+<td>送出</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>請參考功能說明<a href="#送出按鈕click4">(送出)</a>。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td><ol start="6" type="1">
+<li></li>
+</ol></td>
+<td>取消</td>
+<td></td>
+<td></td>
+<td>按鈕</td>
+<td><ol type="1">
+<li><p>點選取消，請參考動作與事件(<a
+href="#取消click4">取消</a>)。</p></li>
+</ol></td>
+</tr>
+<tr>
+<td colspan="6">以上為<strong>功能按鈕</strong>區塊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="前端欄位-7">前端欄位</h4>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 38%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>元件</th>
+<th>動作</th>
+<th>檢核</th>
+<th>說明</th>
+<th>錯誤處理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span id="送出按鈕click4" class="anchor"></span>送出</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>呼叫「<a
+href="#更新角色權限資料">更新角色權限資料</a>」更新資料對應。</p>
+<ol type="A">
+<li><p>若送出成功，則顯示成功toast訊息：已送出申請&lt;換行&gt;已成功送出選單更新。</p></li>
+</ol></li>
+</ol></td>
+<td></td>
+</tr>
+<tr>
+<td><span id="取消click4" class="anchor"></span>取消</td>
+<td>click</td>
+<td></td>
+<td><ol type="1">
+<li><p>關閉視窗回到原頁。</p></li>
+</ol></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="api說明">API說明</h1>
+<h2 id="查詢角色清單-1">查詢角色清單</h2>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 0%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="3" style="text-align: left;"><strong>基本資料</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">功能說明</td>
+<td colspan="2" style="text-align: left;">查詢角色清單</td>
+</tr>
+<tr>
+<td style="text-align: left;">系統/提供者</td>
+<td colspan="2" style="text-align: left;">SRM / AP</td>
+</tr>
+<tr>
+<td style="text-align: left;">執行方式</td>
+<td colspan="2" style="text-align: left;">API</td>
+</tr>
+<tr>
+<td colspan="3" style="text-align: left;"><strong>設計規格</strong></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">API path</td>
+<td style="text-align: left;">AccessRoleInfo/QueryAccessMenuRoles</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">檢核邏輯</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">業務邏輯</td>
+<td style="text-align: left;"><ol type="1">
+<li><p>呼叫AccessRoleInfoService方法QueryAccessMenuRoles</p></li>
+<li><p>取得角色清單</p>
+<ol type="1">
+<li><p>關聯資料表：</p>
+<ol type="1">
+<li><p>[SRM_ ACCESSROLESETTING]</p></li>
+</ol></li>
+<li><p>篩選條件：[STATUS]={true}</p></li>
+</ol></li>
+<li><p>回傳角色清單資料</p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<h2 id="更新角色權限資料">更新角色權限資料</h2>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 0%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="3" style="text-align: left;"><strong>基本資料</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">功能說明</td>
+<td colspan="2" style="text-align: left;">更新角色權限資料</td>
+</tr>
+<tr>
+<td style="text-align: left;">系統/提供者</td>
+<td colspan="2" style="text-align: left;">SRM / AP</td>
+</tr>
+<tr>
+<td style="text-align: left;">執行方式</td>
+<td colspan="2" style="text-align: left;">API</td>
+</tr>
+<tr>
+<td colspan="3" style="text-align: left;"><strong>設計規格</strong></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">API path</td>
+<td style="text-align: left;">AccessRoleInfo/UpdateAccessMenuRoles</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">檢核邏輯</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">業務邏輯</td>
+<td style="text-align: left;"><ol type="1">
+<li><p>呼叫AccessRoleInfoService方法UpdateAccessMenuRoles</p>
+<ol type="1">
+<li><p>將前端form表單資料{AccessMenuRoles}帶入。</p></li>
+<li><p>更新設定table [SRM_ ACCESSROLESETTING]內容，{ GROUPNAME } = {
+AccessMenuRoles.GroupName }</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>{ GROUPDESCRIPTION }={ AccessMenuRoles.GroupDescription }</p>
+<p>{ STATUS }={ AccessMenuRoles.Status }</p>
+</blockquote>
+<ol start="3" type="1">
+<li><p>更新權限關聯table[SRM_FUNCTIONMAPPING]，根據[FUNCTIONMAPPINGID]更新指定資料</p></li>
+<li><p>將[FUNCTIONMAPPINGID] = { AccessMenuRoles.
+FunctionMappingId}資料全部刪除，並將{ AccessMenuRoles.Functions.IsCheck
+} = 1新增一筆資料[B2BSYSTEMFUNCTIONCODE] = { b2bSystemFunctionCcode },[
+B2BSYSTEMFUNCTIONCODE] = { b2bSystemFunctionCcode },{ GROUPID } = {
+GroupId },{ COLLABORATENO } = { CollaborateNo
+}進[SRM_FUNCTIONMAPPING]內。</p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<h2 id="新增角色權限資料">新增角色權限資料</h2>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 0%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="3" style="text-align: left;"><strong>基本資料</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">功能說明</td>
+<td colspan="2" style="text-align: left;">新增角色權限資料</td>
+</tr>
+<tr>
+<td style="text-align: left;">系統/提供者</td>
+<td colspan="2" style="text-align: left;">SRM / AP</td>
+</tr>
+<tr>
+<td style="text-align: left;">執行方式</td>
+<td colspan="2" style="text-align: left;">API</td>
+</tr>
+<tr>
+<td colspan="3" style="text-align: left;"><strong>設計規格</strong></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">API path</td>
+<td style="text-align: left;">AccessRoleInfo/CreateAccessMenuRoles</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">檢核邏輯</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">業務邏輯</td>
+<td style="text-align: left;"><ol type="1">
+<li><p>呼叫AccessRoleInfoService方法CreateAccessMenuRoles</p>
+<ol type="1">
+<li><p>將前端form表單資料{AccessMenuRoles}帶入。</p></li>
+<li><p>新增設定table [SRM_ ACCESSROLESETTING]，[ GROUPNAME ] = {
+AccessMenuRoles.GroupName }</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>[ GROUPDESCRIPTION ]={ AccessMenuRoles.GroupDescription }</p>
+<p>[ STATUS ]={ AccessMenuRoles.Status }</p>
+</blockquote>
+<ol start="3" type="1">
+<li><p>新增權限關聯table[SRM_FUNCTIONMAPPING]</p></li>
+<li><p>將{ AccessMenuRoles.Functions.IsCheck } = 1新增一筆資料[
+B2BSYSTEMFUNCTIONCODE ] = { b2bSystemFunctionCcode },[
+B2BSYSTEMFUNCTIONCODE ] = { b2bSystemFunctionCcode },[ GROUPID ] = {
+GroupId },[ COLLABORATENO ] = { CollaborateNo
+}進[SRM_FUNCTIONMAPPING]內。</p></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<h2 id="刪除角色權限資料">刪除角色權限資料</h2>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 0%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="3" style="text-align: left;"><strong>基本資料</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">功能說明</td>
+<td colspan="2" style="text-align: left;">刪除角色權限資料</td>
+</tr>
+<tr>
+<td style="text-align: left;">系統/提供者</td>
+<td colspan="2" style="text-align: left;">SRM / AP</td>
+</tr>
+<tr>
+<td style="text-align: left;">執行方式</td>
+<td colspan="2" style="text-align: left;">API</td>
+</tr>
+<tr>
+<td colspan="3" style="text-align: left;"><strong>設計規格</strong></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">API path</td>
+<td style="text-align: left;">AccessRoleInfo/DeleteAccessMenuRoles</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">檢核邏輯</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;">業務邏輯</td>
+<td style="text-align: left;"><ol type="1">
+<li><p>呼叫AccessRoleInfoService方法DeleteAccessMenuRoles</p>
+<ol type="1">
+<li><p>將前端form表單資料{AccessMenuRoles.GroupId }帶入。</p></li>
+<li><p>將設定table [SRM_ ACCESSROLESETTING]，{ GROUPID } = {
+AccessMenuRoles.GroupId }資料刪除。</p></li>
+<li><p>將權限關聯table[SRM_FUNCTIONMAPPING], { GROUPID } = {
+AccessMenuRoles.GroupId }資料刪除。</p></li>
+</ol></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<h2 id="查詢b2b功能清單">查詢B2B功能清單</h2>
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr>
+<th colspan="2" style="text-align: left;"><strong>基本資料</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">功能說明</td>
+<td><h2 id="查詢b2b功能清單-1"
+class="unnumbered">查詢B2B功能清單</h2></td>
+</tr>
+<tr>
+<td style="text-align: left;">系統/提供者</td>
+<td style="text-align: left;">SRM / AP</td>
+</tr>
+<tr>
+<td style="text-align: left;">執行方式</td>
+<td style="text-align: left;">API</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;"><strong>設計規格</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">API path</td>
+<td style="text-align: left;">SupplierMenu/QuerySupplierFunctions</td>
+</tr>
+<tr>
+<td style="text-align: left;">檢核邏輯</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">業務邏輯</td>
+<td><ol type="1">
+<li><p>呼叫SupplierMenuService方法QuerySupplierFunctions。</p>
+<ol type="1">
+<li><p>帶入參數：{ CollaborateNo }、{ GroupId } or {空}。</p></li>
+<li><p>將查詢參數帶入[SRM_FUNCTIONMAPPING] 取得符合條件的資料</p>
+<ol type="1">
+<li><p>[GROUPID] = { GroupId }</p></li>
+<li><p>[COLLABORATENO] = { CollaborateNo }</p></li>
+<li><p>將查詢結果[B2BSYSTEMFUNCTIONCODE] 紀錄。</p></li>
+</ol></li>
+<li><p>帶出所有[SRM_SYSTEMFUNCTION]內[STATUS]=1的資料。</p></li>
+<li><p>如果有設定的mapping資料{
+B2bFunctionMapping.B2bSystemFunctionCodes }
+與[SRM_SYSTEMFUNCTION]做結合,將重疊資料視為被選上的資料。</p></li>
+</ol></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+<h1 id="錯誤訊息代碼">錯誤訊息代碼</h1>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 36%" />
+<col style="width: 33%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>錯誤代碼</strong></th>
+<th><strong>錯誤訊息</strong></th>
+<th><strong>用意</strong></th>
+<th><strong>HTTP Status Code</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRM-0001</td>
+<td>缺少必要欄位資訊</td>
+<td>API未接到必填欄位時</td>
+<td>400</td>
+</tr>
+</tbody>
+</table>
+<h1 id="角色權限代碼">角色權限代碼</h1>
+<table>
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 27%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>PermissionCode</strong></th>
+<th><strong>SystemFunctionCode</strong></th>
+<th><strong>SystemCode</strong></th>
+<th><strong>說明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRM-TX-0311</td>
+<td>SRM-TX-0311</td>
+<td>SRM</td>
+<td>進入功能</td>
+</tr>
+</tbody>
+</table>
+<h1 id="database-design">Database Design</h1>
+<h2 id="database-tables-diagram">Database Tables Diagram</h2>
+<p><img src="temp_media/media/image20.png"
+style="width:6.76806in;height:4.97661in"
+alt="一張含有 文字, 螢幕擷取畫面, 設計 的圖片 自動產生的描述" /></p>
+<h2 id="database-tables-schema">Database Tables Schema</h2>
+<h3 id="table-srm_collaboration關聯共用主檔">Table
+[SRM_COLLABORATION]關聯共用主檔</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Field Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COLLABORATIONNO</td>
+<td>NUMBER(20)</td>
+<td>TRUE</td>
+<td>關聯共用主檔編號</td>
+</tr>
+<tr>
+<td>COLLABORATIONCODE</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>關聯共用主檔類型代碼</td>
+</tr>
+<tr>
+<td>COLLABORATESTATUS</td>
+<td>NUMBER(4,0)</td>
+<td>TRUE</td>
+<td>合作狀態代碼(15)</td>
+</tr>
+<tr>
+<td>DESCRIPTION</td>
+<td>NVARCHAR2(512)</td>
+<td>FALSE</td>
+<td>其它說明</td>
+</tr>
+<tr>
+<td>PAYMENTBANKNAME</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>請款銀行名稱</td>
+</tr>
+<tr>
+<td>PAYMENTBANKACCOUNT</td>
+<td>NVARCHAR2(32)</td>
+<td>FALSE</td>
+<td>請款銀行帳號</td>
+</tr>
+<tr>
+<td>CREATEDDATE</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>建立時間</td>
+</tr>
+<tr>
+<td>CREATEDBY</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>建立人員</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Field Name</strong></td>
+<td><strong>Index state</strong></td>
+<td><strong>Used columns</strong></td>
+<td><strong>Index expression</strong></td>
+</tr>
+<tr>
+<td>SRM_COLLABORATION_PK</td>
+<td>Primary Constraint</td>
+<td>SRM_COLLABORATION.COLLABORATIONNO</td>
+<td>　</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-srm_supplier供應商主檔">Table
+[SRM_SUPPLIER]供應商主檔</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Field Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SUPPLIERID</td>
+<td>NUMBER(20)</td>
+<td>TRUE</td>
+<td>主檔流水號</td>
+</tr>
+<tr>
+<td>SUPIDENTIFYID</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>廠商識別碼</td>
+</tr>
+<tr>
+<td>COLLABORATIONNO</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>廠商編號</td>
+</tr>
+<tr>
+<td>UNIFYNO</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>統一編號</td>
+</tr>
+<tr>
+<td>IDNO</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>身分證字號</td>
+</tr>
+<tr>
+<td>SUPPLIERTYPE</td>
+<td>NVARCHAR2(64)</td>
+<td>TRUE</td>
+<td>供應商型態代碼(12)</td>
+</tr>
+<tr>
+<td>MAINSTATUS</td>
+<td>NVARCHAR2(64)</td>
+<td>TRUE</td>
+<td>供應商主檔狀態代碼(54)</td>
+</tr>
+<tr>
+<td>COLLABORATECHANNELTYPE</td>
+<td>NVARCHAR2(64)</td>
+<td>FALSE</td>
+<td>合作通路類別代碼(13)</td>
+</tr>
+<tr>
+<td>SUPPLIERNAME</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>廠商名稱</td>
+</tr>
+<tr>
+<td>FULLNAME</td>
+<td>NVARCHAR2(32)</td>
+<td>TRUE</td>
+<td>供應商全名</td>
+</tr>
+<tr>
+<td>COMPANYTYPE</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>公司別代碼</td>
+</tr>
+<tr>
+<td>OVERSEASMALLTYPE</td>
+<td>NVARCHAR2(64)</td>
+<td>FALSE</td>
+<td>境外商城代碼(14)</td>
+</tr>
+<tr>
+<td>CAPITALIZATION</td>
+<td>NUMBER(10)</td>
+<td>TRUE</td>
+<td>資本額</td>
+</tr>
+<tr>
+<td>ESTABLISHDATE</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>設立日期</td>
+</tr>
+<tr>
+<td>CONTACTAREACODE</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>聯絡區碼</td>
+</tr>
+<tr>
+<td>CONTACTNUMBER</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>聯絡電話</td>
+</tr>
+<tr>
+<td>CONTACTEXTENSION</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>聯絡分機</td>
+</tr>
+<tr>
+<td>FAXNUMBER</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>傳真號碼</td>
+</tr>
+<tr>
+<td>MANAGER</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>負責人</td>
+</tr>
+<tr>
+<td>RESEARCHABILITYTYPE</td>
+<td>NVARCHAR2(64)</td>
+<td>FALSE</td>
+<td>研發能力代碼(16)</td>
+</tr>
+<tr>
+<td>NUMBEROFEMPLOYEE</td>
+<td>NUMBER(7)</td>
+<td>FALSE</td>
+<td>員工人數</td>
+</tr>
+<tr>
+<td>DEDUCTWHITELIST</td>
+<td>NUMBER(1)</td>
+<td>FALSE</td>
+<td>減量白名單</td>
+</tr>
+<tr>
+<td>ACCESSROLETYPE</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>權限角色代碼(21)</td>
+</tr>
+<tr>
+<td>OPERATIONCODE</td>
+<td>NVARCHAR2(64)</td>
+<td>FALSE</td>
+<td>作業代碼</td>
+</tr>
+<tr>
+<td>PICKUPATSUPPLIERSHIPPINGCOMPANY</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>到廠取貨貨運商(一般情況)</td>
+</tr>
+<tr>
+<td>DELIVERYDAYS</td>
+<td>NUMBER(3)</td>
+<td>FALSE</td>
+<td>配送天數</td>
+</tr>
+<tr>
+<td>ISSTOCKINGWHITELIST</td>
+<td>NUMBER(1)</td>
+<td>FALSE</td>
+<td>是否是入庫白名單</td>
+</tr>
+<tr>
+<td>RTNFACTORYPICKYN</td>
+<td>NUMBER(1)</td>
+<td>FALSE</td>
+<td>到廠逆物流</td>
+</tr>
+<tr>
+<td>INCOMEINVOICEFORMAT</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>進項發票格式</td>
+</tr>
+<tr>
+<td>CERTIFICATECODE</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>憑證代碼</td>
+</tr>
+<tr>
+<td>ISADVANCEPAY</td>
+<td>NUMBER(1)</td>
+<td>FALSE</td>
+<td>是否提前撥款</td>
+</tr>
+<tr>
+<td>ISAGENTINVOICE</td>
+<td>NUMBER(1)</td>
+<td>FALSE</td>
+<td>是否代開發票</td>
+</tr>
+<tr>
+<td>PAYMENTMETHODTYPE</td>
+<td>NUMBER(4,0)</td>
+<td>FALSE</td>
+<td>付款方式代碼(27)</td>
+</tr>
+<tr>
+<td>TAXCODE</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>課稅代碼</td>
+</tr>
+<tr>
+<td>INSHOPSETTLECLASSTYPE</td>
+<td>NUMBER(4,0)</td>
+<td>FALSE</td>
+<td>店中店廠請代碼(29)</td>
+</tr>
+<tr>
+<td>REQUESTPAYMENTREFUNDBASEDATETYPE</td>
+<td>NUMBER(4,0)</td>
+<td>FALSE</td>
+<td>廠請退款基準日代碼(30)</td>
+</tr>
+<tr>
+<td>ISMARGINREQUIRED</td>
+<td>NUMBER(1)</td>
+<td>FALSE</td>
+<td>是否需繳保證金</td>
+</tr>
+<tr>
+<td>ISIDOFMANAGER</td>
+<td>NUMBER(1)</td>
+<td>TRUE</td>
+<td>是否可提供負責人身分證</td>
+</tr>
+<tr>
+<td>ISBUSINESSREGISTRATION</td>
+<td>NUMBER(1)</td>
+<td>TRUE</td>
+<td>是否可提供營業登記</td>
+</tr>
+<tr>
+<td>IS401REPORT</td>
+<td>NUMBER(1)</td>
+<td>TRUE</td>
+<td>是否可提供401表</td>
+</tr>
+<tr>
+<td>MD</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>指派商開</td>
+</tr>
+<tr>
+<td>CREATEDDATE</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>建立時間</td>
+</tr>
+<tr>
+<td>CREATEDBY</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>建立人員</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Field Name</strong></td>
+<td><strong>Index state</strong></td>
+<td><strong>Used columns</strong></td>
+<td><strong>Index expression</strong></td>
+</tr>
+<tr>
+<td>SRM_SUPPLIER_PK</td>
+<td>Primary Constraint</td>
+<td>SRM_SUPPLIER.SUPPLIERID</td>
+<td>　</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-srm_partner合作夥伴">Table [SRM_PARTNER]合作夥伴</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Field Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PARTNERID</td>
+<td>NUMBER(20)</td>
+<td>TRUE</td>
+<td>主檔流水號</td>
+</tr>
+<tr>
+<td>COLLABORATIONNO</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>廠商編號</td>
+</tr>
+<tr>
+<td>IDNO</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>身分證字號</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>合作夥伴名稱</td>
+</tr>
+<tr>
+<td>ETMNO</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>東購編號</td>
+</tr>
+<tr>
+<td>MAINSTATUS</td>
+<td>NUMBER(4,0)</td>
+<td>TRUE</td>
+<td>合作夥伴主檔狀態代碼(54)</td>
+</tr>
+<tr>
+<td>CONTACTPHONE</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>合作夥伴電話</td>
+</tr>
+<tr>
+<td>PARTNERBIRTHDAY</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>合作夥伴生日</td>
+</tr>
+<tr>
+<td>PARTNERNAME</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>合作夥伴姓名</td>
+</tr>
+<tr>
+<td>NUMBEROFEMPLOYEE</td>
+<td>NUMBER(7)</td>
+<td>FALSE</td>
+<td>直播主團隊人數</td>
+</tr>
+<tr>
+<td>CREATEDDATE</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>建立時間</td>
+</tr>
+<tr>
+<td>CREATEDBY</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>建立人員</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Field Name</strong></td>
+<td><strong>Index state</strong></td>
+<td><strong>Used columns</strong></td>
+<td><strong>Index expression</strong></td>
+</tr>
+<tr>
+<td>SRM_PARTNER_PK</td>
+<td>Primary Constraint</td>
+<td>SRM_PARTNER.PARTNERID</td>
+<td>　</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-srm_accessrolesettingaccessrolesetting">Table
+[SRM_ACCESSROLESETTING]ACCESSROLESETTING</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Field Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACCESSROLESETTINGID</td>
+<td>NUMBER(20)</td>
+<td>TRUE</td>
+<td>群組ID</td>
+</tr>
+<tr>
+<td>GROUPNAME</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>群組名稱</td>
+</tr>
+<tr>
+<td>GROUPDESCRIPTION</td>
+<td>NVARCHAR2(256)</td>
+<td>FALSE</td>
+<td>群組描述</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>NUMBER(1)</td>
+<td>TRUE</td>
+<td>狀態</td>
+</tr>
+<tr>
+<td>MODIFIEDBY</td>
+<td>NUMBER(6,0)</td>
+<td>TRUE</td>
+<td>最後異動人員</td>
+</tr>
+<tr>
+<td>MODIFIEDDATE</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>最後異動時間</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Field Name</strong></td>
+<td><strong>Index state</strong></td>
+<td><strong>Used columns</strong></td>
+<td><strong>Index expression</strong></td>
+</tr>
+<tr>
+<td>SRM_ACCESSROLESETTING_PK</td>
+<td>Primary Constraint</td>
+<td>SRM_ACCESSROLESETTING.ACCESSROLESETTINGID</td>
+<td>　</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-srm_systemfunctionb2b功能表">Table
+[SRM_SYSTEMFUNCTION]B2B功能表</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Field Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYSTEMFUNCTIONCODE</td>
+<td>NVARCHAR2(16)</td>
+<td>TRUE</td>
+<td>B2B功能代碼</td>
+</tr>
+<tr>
+<td>SYSTEMFUNCTIONNAME</td>
+<td>NVARCHAR2(64)</td>
+<td>TRUE</td>
+<td>B2B功能名稱</td>
+</tr>
+<tr>
+<td>SYSTEMFUNCTIONPARENTCODE</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>B2B母功能代碼</td>
+</tr>
+<tr>
+<td>ENTRYURL</td>
+<td>NVARCHAR2(128)</td>
+<td>FALSE</td>
+<td>B2B功能連結</td>
+</tr>
+<tr>
+<td>SORT</td>
+<td>NUMBER(3)</td>
+<td>TRUE</td>
+<td>B2B功能排序</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>NUMBER(1)</td>
+<td>TRUE</td>
+<td>狀態</td>
+</tr>
+<tr>
+<td>MODIFIEDBY</td>
+<td>NUMBER(6,0)</td>
+<td>TRUE</td>
+<td>最後異動人員</td>
+</tr>
+<tr>
+<td>MODIFIEDDATE</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>最後異動時間</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Field Name</strong></td>
+<td><strong>Index state</strong></td>
+<td><strong>Used columns</strong></td>
+<td><strong>Index expression</strong></td>
+</tr>
+<tr>
+<td>SRM_SYSTEMFUNCTION_PK</td>
+<td>Primary Constraint</td>
+<td>SRM_SYSTEMFUNCTION.SYSTEMFUNCTIONCODE</td>
+<td>　</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-srm_functionmappingb2b功能mapping檔">Table
+[SRM_FUNCTIONMAPPING]B2B功能Mapping檔</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th><strong>Field Name</strong></th>
+<th><strong>Data Type</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FUNCTIONMAPPINGID</td>
+<td>NUMBER(20)</td>
+<td>TRUE</td>
+<td>B2B功能Mapping檔流水號</td>
+</tr>
+<tr>
+<td>B2BSYSTEMFUNCTIONCODE</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>B2B功能代碼</td>
+</tr>
+<tr>
+<td>GROUPID</td>
+<td>NUMBER(20)</td>
+<td>FALSE</td>
+<td>群組ID</td>
+</tr>
+<tr>
+<td>COLLABORATENO</td>
+<td>NVARCHAR2(16)</td>
+<td>FALSE</td>
+<td>供應商編號</td>
+</tr>
+<tr>
+<td>MODIFIEDBY</td>
+<td>NUMBER(6,0)</td>
+<td>TRUE</td>
+<td>最後異動人員</td>
+</tr>
+<tr>
+<td>MODIFIEDDATE</td>
+<td>DATE</td>
+<td>TRUE</td>
+<td>最後異動時間</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Field Name</strong></td>
+<td><strong>Index state</strong></td>
+<td><strong>Used columns</strong></td>
+<td><strong>Index expression</strong></td>
+</tr>
+<tr>
+<td>SRM_FUNCTIONMAPPING_PK</td>
+<td>Primary Constraint</td>
+<td>SRM_FUNCTIONMAPPING.FUNCTIONMAPPINGID</td>
+<td>　</td>
+</tr>
+</tbody>
+</table>
+<h1 id="外部依賴">外部依賴</h1>
+<p>此功能依賴於自有DB，無依賴其他功能，故此章無相關外部依賴內容。</p>
+<h1 id="批次執行">批次執行</h1>
+<p>此功能無批次需求，故無此相關說明。</p>
